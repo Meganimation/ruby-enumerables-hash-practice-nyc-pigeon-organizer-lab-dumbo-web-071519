@@ -1,6 +1,7 @@
 def nyc_pigeon_organizer(data)
-  new_hash ={}
-  data.each do |property,hash| 
+  new_hash = {}
+  data.each do |property, hash|
+  hash.each do |ele, array|
   array.each do |name| 
     
     if !new_hash[name].has_key?(name)
@@ -11,8 +12,8 @@ def nyc_pigeon_organizer(data)
       new_hash[name][property] = []
     end
     
-    if !new_hash[name][property].include?(attribute)
-      new_hash[name][property] << attribute.to_s 
+    if !new_hash[name][property].include?(ele)
+      new_hash[name][property] << ele.to_s 
     end 
   end 
 end 
