@@ -21,4 +21,3 @@ end
 
 new_hash
 end
-end
